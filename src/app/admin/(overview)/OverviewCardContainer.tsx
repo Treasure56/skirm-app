@@ -8,7 +8,7 @@ export default function OverviewCardContainer() {
     return (
         <div>
            
-     <div className="flex flex-col  bg-light rounded-lg p-4">
+     <div className="flex flex-col shadow bg-light rounded-lg p-4">
      <div className="flex justify-between p-4">
         <h1 className="text-md font-bold">Statistics</h1>
         <AppSelect variant="app-select-underline"  name="" options={["Option 1", "Option 2", "Option 3"]} value=""/>

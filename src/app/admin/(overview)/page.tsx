@@ -1,5 +1,8 @@
 import { PageTitle } from "@/components/admin";
 import OverviewCardContainer from "./OverviewCardContainer";
+import UsersTable from "./UsersTable";
+import SkirmTable from "./Withdrals";
+import MatchesTable from "./MatchesTable";
 
 
 export default function Page() {
@@ -9,6 +12,13 @@ export default function Page() {
             Overview
         </PageTitle>
       <OverviewCardContainer />
+      <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
+      <UsersTable />
+      <div className="grid grid-cols-1 gap-6">
+        <SkirmTable />
+        <MatchesTable />
+      </div>
+      </div>
     </div>
   );
 }
