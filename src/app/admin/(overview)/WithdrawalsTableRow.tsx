@@ -17,7 +17,7 @@ export default function WithdrawalsTableRow({ bankAccountName, bankAccountNumber
        <p>{bankAccountNumber}</p>
        </div>
          <p>{bankAccountName}</p>
-         <p className="bg-yellow-200 rounded-[35px] w-fit py-1 px-2 text-dark">{isApproved}</p>
+         <p className="btn-staus-pending">{isApproved}</p>
          <p>{timeDifference}</p>
         </div>
     );

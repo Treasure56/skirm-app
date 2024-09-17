@@ -1,7 +1,7 @@
-import { usersTableDummys } from "@/utils/dummy";
 import UsersTableRow from "./UserTableRow";
 import Link from "next/link";
 import { HiChevronRight } from "react-icons/hi2";
+import { dummyUsers } from "@/skirm-app-shared/user";
 
 export default function UsersTable() {
     
@@ -17,8 +17,8 @@ export default function UsersTable() {
                 <p>Phone</p>
                </div>
               {
-                usersTableDummys.map(usersTableDummy => (
-                    <UsersTableRow  key={usersTableDummy._id} {...usersTableDummy}/>
+                dummyUsers.map(dummyUser => (
+                    <UsersTableRow  key={dummyUser._id} {...dummyUser}/>
                 ))
               }
             </div>

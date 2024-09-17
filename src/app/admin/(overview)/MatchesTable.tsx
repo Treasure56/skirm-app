@@ -1,9 +1,11 @@
-import { matchDummys } from "@/utils/dummy";
 import { HiChevronRight } from "react-icons/hi2";
 import Link from "next/link";
 import MatchesTableRow from "./MatchesTableRow";
+import { dummyMatchesDetailed } from "@/skirm-app-shared/match";
 
 export default function MatchesTable() {
+    const matches = dummyMatchesDetailed;
+    
   return (
     <div className="bg-light p-4 flex flex-col shadow  rounded-xl">
       
@@ -26,8 +28,8 @@ export default function MatchesTable() {
           <p>Start Date Time</p>
           <p>League</p>
         </div>
-        {matchDummys.map((matchDummy) => (
-          <MatchesTableRow key={matchDummy._id} {...matchDummy} />
+        {matches.map((match) => (
+          <MatchesTableRow key={match._id} {...match} />
         ))}
        
       </div>

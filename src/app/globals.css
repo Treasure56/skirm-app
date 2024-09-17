@@ -15,7 +15,7 @@
   }
 
   .app-select {
-    @apply w-full border outline-primary text-dark-text py-3 pe-3 rounded-md bg-neutral-100;
+    @apply w-full border outline-primary text-dark-text py-1 pe-3 rounded-md bg-neutral-100;
   }
 
   .heading {
@@ -27,7 +27,7 @@
   }
 
   .btn-primary {
-    @apply bg-primary border-primary btn text-light-text hover:bg-primary-dark text-sm font-[500] py-3 inline-flex gap-1;
+    @apply bg-primary border-primary btn text-light-text hover:bg-primary-dark text-sm font-[500]  inline-flex gap-1;
   }
 
   .btn-dark {
@@ -71,6 +71,16 @@
     border-top-right-radius: 120px 150px;
     border-bottom-left-radius: 120px 150px;
     border-bottom-right-radius: 120px 150px;
+  }
+  .btn-status-pending{
+    @apply bg-yellow-200 rounded-[35px] w-fit py-1 px-2 text-dark
+  }
+
+  .btn-status-success{
+    @apply bg-green-200 rounded-[35px] w-fit py-1 px-2 text-dark
+  }
+  .btn-select{
+    @apply w-full  outline-primary text-dark-text text-start py-1 pe-3 rounded-md hover:bg-neutral-100 px-2
   }
 }
 
