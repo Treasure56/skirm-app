@@ -1,4 +1,4 @@
-import { Admin as AdminUser } from '@/types';
+import { Admin as AdminUser } from '@/skirm-app-shared/admin';
 import {create} from 'zustand';
 
 export type AdminState = {

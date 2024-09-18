@@ -1,8 +1,9 @@
+import CountryStateSelect from "@/components/admin/Country-StateSelect";
 import { AppInput, FormButton } from "@/components/form";
 import { AlertDialog } from "@radix-ui/themes";
 import { IoIosClose } from "react-icons/io";
 
-export default function CreateLeague({ children }: { children: React.ReactNode }) {
+export default function CreateClub({ children }: { children: React.ReactNode }) {
     return (
         <AlertDialog.Root>
             <AlertDialog.Trigger >
@@ -10,13 +11,14 @@ export default function CreateLeague({ children }: { children: React.ReactNode }
             </AlertDialog.Trigger>
             <AlertDialog.Content>
             <div className="flex justify-between pb-6">
-                    <h4 className="font-semibold">Add New League</h4>
+                    <h4 className="font-semibold">Add New Club</h4>
                     <AlertDialog.Cancel>
                     <IoIosClose className="text-xl" />
                     </AlertDialog.Cancel>
 
                         </div>
                     <form className="flex flex-col gap-4">
+                    <CountryStateSelect />
                 {
                     fields.map((item) => {
                         return <AppInput key={item.name} {...item} />
@@ -32,27 +34,21 @@ export default function CreateLeague({ children }: { children: React.ReactNode }
 
 const fields = [
     {
-        title: "Title",
-        name: "title",
+        title: "Name",
+        name: "name",
         type: "text",
-        placeholder: "Name"
+        placeholder: "Enter Name"
     },
     {
-        title: "Start Date",
-        name: "startDate",
-        type: "date",
-        placeholder: "Enter Start Date"
+        title: "Primary Color",
+        name: "primaryColor",
+        type: "text",
+        placeholder: "Enter color"
     },
     {
-        title: "End Date",
-        name: "endDate",
-        type: "date",
-        placeholder: "Enter End Date"
-    },
-    {
-        placeholder: "",
         title: "Logo",
         name: "logo",
         type: "file",
+        placeholder: ''
     }
 ]

@@ -4,7 +4,7 @@ import * as Popover from '@radix-ui/react-popover';
 import { HTMLAttributes,  useMemo } from "react";
 // import { debugLog } from "@/functions/helpers";
 import { useChangeSearchParams } from "@/hooks";
-import { Paginated } from '@/types';
+import { Paginated } from '@/skirm-app-shared/basicTypes';
 // import { debugLog } from '@/functions/debug';
 
 export type PaginationProps = HTMLAttributes<HTMLDivElement> & {

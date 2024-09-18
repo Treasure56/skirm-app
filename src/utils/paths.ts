@@ -16,6 +16,7 @@ export const paths = {
     clubs: "/admin/clubs",
     notion: "/admin/notion",
     settings: "/admin/settings",
+    teams: "/admin/teams",
 
 
 

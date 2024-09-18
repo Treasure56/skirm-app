@@ -1,10 +1,10 @@
-import { Admin } from "@/types";
+import { Admin } from "@/skirm-app-shared/admin";
 import Sidebar from "./Sidebar";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-    const admin: Admin = { _id: "", createdAt: "", email: "eg@gmail.com", password: "", full_name: "jonh doe" };
+    const admin: Admin = { _id: "", createdAt: "", email: "eg@gmail.com", userName: "admin1" };
 
     return (
         <Theme>

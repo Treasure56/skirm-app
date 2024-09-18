@@ -7,7 +7,7 @@ import { FaX } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect } from "react";
 import { useAdminStore } from "@/state";
-import { Admin } from "@/types/";
+import { Admin } from "@/skirm-app-shared/";
 import { IoGrid } from "react-icons/io5";
 import { BiLogOut } from "react-icons/bi";
 import { Avatar } from "@radix-ui/themes";
@@ -91,6 +91,7 @@ const links: SidebarLinkProps[] = [
         icon: <SiClubforce />,
         href: paths.clubs,
     },
+
     {
         title: "Notion",
         icon: <SiNotion />,
