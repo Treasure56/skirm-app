@@ -1,0 +1,3 @@
+[submodule "skirm-app-shared"]
+	path = skirm-app-shared
+	url = https://github.com/abundiko/skirm-app-shared
