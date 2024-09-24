@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { Withdrawal } from "@/skirm-app-shared";
+import { WithdrawalDetailed } from "@/skirm-app-shared";
 import { formatDistance, subMinutes } from "date-fns";
 const now = new Date();
 
@@ -9,7 +9,7 @@ const threeMinutesAgo = subMinutes(now, 3);
 const timeDifference = formatDistance(threeMinutesAgo, now, { addSuffix: true });
 
 
-export default function WithdrawalsTableRow({ bankAccountName, bankAccountNumber, bankName,}: Withdrawal) {
+export default function WithdrawalsTableRow({ bankAccountName, bankAccountNumber, bankName,}:WithdrawalDetailed) {
     return (
         <div className="grid grid-cols-3 text-sm py-4 items-center text-neutral-400">
        <div className="flex flex-col">

@@ -1,4 +1,4 @@
-import { User, Withdrawal } from "@/skirm-app-shared";
+import { User} from "@/skirm-app-shared";
 import { Matches, SkirmProps } from "@/types";
 
  export const usersTableDummys:User[]=[
@@ -59,18 +59,5 @@ export const matchDummys:Matches[] =[
     awayTeam: "Lucinda Mayer",
     league: "Premier League",
     startDateTime: "2022-01-01T00:00:00.000Z",
-  }
-]
-
-
-export const withdrawalDummys:Withdrawal[] =[
-  {
-    _id: "1",
-    createdAt: "2022-01-01T00:00:00.000Z",
-    user: "Lucinda Ferguson",
-    bankName: "Bank Name",
-    bankAccountNumber: "1234567890",
-    bankAccountName: "Lucinda Ferguson",
-    isApproved: "Pending",
   }
 ]

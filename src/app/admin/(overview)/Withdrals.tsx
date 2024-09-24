@@ -1,9 +1,10 @@
 import { HiChevronRight } from "react-icons/hi2";
 import Link from "next/link";
 import WithdrawalsTableRow from "./WithdrawalsTableRow";
-import { withdrawalDummys } from "@/utils/dummy";
+import { dummyWithdrawalsDetailed } from "@/skirm-app-shared/withdrawal";
 
 export default function WithrawalsTable() {
+  const withraws = dummyWithdrawalsDetailed
   return (
     <div className="bg-light p-4 flex flex-col shadow  rounded-xl">
       <div className="flex justify-between">
@@ -25,8 +26,8 @@ export default function WithrawalsTable() {
           <p></p>
           <p>Created</p>
         </div>
-        {withdrawalDummys.map((withdrawalDummy) => (
-          <WithdrawalsTableRow key={withdrawalDummy._id} {...withdrawalDummy} />
+        {withraws.map((withraw) => (
+          <WithdrawalsTableRow key={withraw._id} {...withraw} />
         ))}
        
       </div>
