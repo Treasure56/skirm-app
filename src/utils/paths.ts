@@ -17,6 +17,8 @@ export const paths = {
     notion: "/admin/notion",
     settings: "/admin/settings",
     teams: "/admin/teams",
+    deposit: "/admin/deposit",
+    withdrawal: "/admin/withdrawal"
 
 
 

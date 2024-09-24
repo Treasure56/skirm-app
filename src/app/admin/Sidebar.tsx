@@ -9,12 +9,12 @@ import { useEffect, useLayoutEffect } from "react";
 import { useAdminStore } from "@/state";
 import { Admin } from "@/skirm-app-shared/";
 import { IoGrid } from "react-icons/io5";
-import { BiLogOut } from "react-icons/bi";
+import { BiLogOut, BiMoneyWithdraw } from "react-icons/bi";
 import { Avatar } from "@radix-ui/themes";
 import { HiCheckCircle, HiUsers } from "react-icons/hi2";
 import { IoMdFootball } from "react-icons/io";
 import { SiClubforce, SiNotion, SiPremierleague } from "react-icons/si";
-import { RiSettings3Fill } from "react-icons/ri";
+import { RiMoneyDollarCircleFill, RiSettings3Fill } from "react-icons/ri";
 
 export default function Sidebar({ admin }: { admin: Admin }) {
     const pathname = usePathname();
@@ -31,7 +31,7 @@ export default function Sidebar({ admin }: { admin: Admin }) {
     }, [pathname]);
 
     return (
-        <div className={`w-full flex flex-col gap-4 fixed md:sticky bg-light top-0 left-0 h-screen p-4 overflow-y-auto transition-transform ${open ? 'max-md:translate-x-0' : 'max-md:translate-x-[-110%]'}`}>
+        <div className={`w-full flex flex-col gap-4 fixed md:sticky z-40 bg-light top-0 left-0 h-screen p-4 overflow-y-auto transition-transform ${open ? 'max-md:translate-x-0' : 'max-md:translate-x-[-110%]'}`}>
             <div className="flex justify-between items-center">
                 <AppLogo />
                 <button onClick={() => setOpen(false)} className="text-xl icon-btn md:hidden p-2">
@@ -96,6 +96,16 @@ const links: SidebarLinkProps[] = [
         title: "Notion",
         icon: <SiNotion />,
         href: paths.notion,
+    },
+    {
+        title: "Deposit",
+        icon: <RiMoneyDollarCircleFill />,
+        href: paths.deposit,
+    },
+    {
+        title: "Withdrawal",
+        icon: <BiMoneyWithdraw />,
+        href: paths.withdrawal,
     },
     {
         title: "Settings",

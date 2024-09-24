@@ -2,7 +2,7 @@ git add .
 
 echo "Added: "
 echo ------------------------------------------------------------------------------------
-git commit -m "added: user table, league table and matches table"
+git commit -m "added: Deposit page"
 
 echo "Committed: "
 echo ------------------------------------------------------------------------------------
