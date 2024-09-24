@@ -18,7 +18,7 @@ export default function WithrawalsTable() {
       </div>
 
       <div className="flex flex-col py-6 divide-y-2">
-        <div className="grid grid-cols-4 text-sm font-semibold bg-gray-200 p-2 rounded">
+        <div className="grid grid-cols-3 text-sm font-semibold bg-gray-200 p-2 rounded">
           <p>Bank Name</p>
           {/* <p>Acct Number</p> */}
           <p>Acct Name</p>
