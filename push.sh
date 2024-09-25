@@ -2,7 +2,7 @@ git add .
 
 echo "Added: "
 echo ------------------------------------------------------------------------------------
-git commit -m "added: Deposit page"
+git commit -m "added: Withrawal"
 
 echo "Committed: "
 echo ------------------------------------------------------------------------------------

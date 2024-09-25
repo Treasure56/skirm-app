@@ -75,6 +75,9 @@
   .btn-status-pending{
     @apply bg-yellow-200 rounded-[35px] w-fit py-1 px-2 text-dark
   }
+  .btn-status-declined{
+    @apply bg-red-300 rounded-[35px] w-fit py-1 px-2 text-dark
+  }
 
   .btn-status-success{
     @apply bg-green-200 rounded-[35px] w-fit py-1 px-2 text-dark

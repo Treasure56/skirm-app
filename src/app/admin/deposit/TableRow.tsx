@@ -1,5 +1,6 @@
+"use client"
 /* eslint-disable @next/next/no-img-element */
-import { formatNumber } from "@/components/functions/FormatDate";
+import { formatNumber } from "@/components/functions/FormatNumber";
 import { DepositDetailed} from "@/skirm-app-shared";
 import { Avatar } from "@radix-ui/themes";
 import { formatDistance } from "date-fns";
