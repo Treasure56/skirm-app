@@ -91,12 +91,6 @@ const links: SidebarLinkProps[] = [
         icon: <SiClubforce />,
         href: paths.clubs,
     },
-
-    {
-        title: "Notion",
-        icon: <SiNotion />,
-        href: paths.notion,
-    },
     {
         title: "Deposit",
         icon: <RiMoneyDollarCircleFill />,

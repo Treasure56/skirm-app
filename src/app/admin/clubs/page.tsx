@@ -4,6 +4,7 @@ import LeagueFilter from "@/components/admin/LeagueFilter";
 import Search from "@/components/admin/Search";
 import CreateClub from "./CreateClub";
 import { HiPlus } from "react-icons/hi2";
+import { Suspense } from "react";
 
 export default function Page() {
     return (
@@ -16,7 +17,7 @@ export default function Page() {
             </div>
             <div className="flex justify-between items-center">
                 <Search />
-               <LeagueFilter /> 
+               <Suspense><LeagueFilter /> </Suspense>
              
             </div>
             <Table />

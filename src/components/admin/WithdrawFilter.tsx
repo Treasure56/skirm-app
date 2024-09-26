@@ -1,13 +1,29 @@
-"use client"
+"use client";
 import { useChangeSearchParams } from "@/hooks";
-import { AppInput } from "../form";
+import { AppInput, AppSelect } from "../form";
 
 export default function WithdrawFilter() {
-    const { pushParams, params } = useChangeSearchParams();
+  const { pushParams, params } = useChangeSearchParams();
 
-    return (
-        <div>
-             <AppInput value={params.get('date')?? ""} onChange={date =>pushParams({date})} type="date" name="date" placeholder="" />
-        </div>
-    );
+  return (
+    <>
+      <AppInput
+        value={params.get("date") ?? ""}
+        onChange={(date) => pushParams({ date })}
+        type="date"
+        name="date"
+        placeholder=""
+      />
+      <AppSelect
+        options={[
+          { title: "All", value: "" },
+          { title: "Approved", value: "approved" },
+          { title: "Pending", value: "pending" },
+          { title: "Declined", value: "declined" },
+        ]}
+        name="filter"
+        onChange={(v) => pushParams({ status: v })}
+      />
+    </>
+  );
 }

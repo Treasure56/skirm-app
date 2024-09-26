@@ -2,7 +2,7 @@
 import { useChangeSearchParams } from "@/hooks";
 import { AppInput } from "../form";
 
-export default function DepositFilter() {
+export default function DateFilter() {
     const { pushParams, params } = useChangeSearchParams();
 
     return (

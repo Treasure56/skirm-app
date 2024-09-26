@@ -9,7 +9,7 @@ export default function Page() {
             <PageTitle>Users</PageTitle>
             <div className="flex justify-between items-center">
                 <Search />
-                <AppSelect options={["verified", "unverified"]}  name=""/>
+                <AppSelect options={[ "All","verified", "unverified", "Declined"]}  name=""/>
             </div>
             <Table />
         </div>
