@@ -2,7 +2,7 @@ git add .
 
 echo "Added: "
 echo ------------------------------------------------------------------------------------
-git commit -m "added: Withrawal"
+git commit -m "added: Contact page"
 
 echo "Committed: "
 echo ------------------------------------------------------------------------------------
