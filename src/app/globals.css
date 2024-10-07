@@ -23,7 +23,7 @@
   }
 
   .btn {
-    @apply inline-flex gap-1 border items-center justify-center rounded-md shadow-sm transition duration-150 ease-in-out font-[500]
+    @apply inline-flex gap-1 border p-2 items-center justify-center rounded-md shadow-sm transition duration-150 ease-in-out font-[500]
   }
 
   .btn-primary {

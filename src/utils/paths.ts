@@ -4,8 +4,9 @@ export const paths = {
 
 
     // admin auth
-    adminLogin: "/admin-login",
-    adminRegister: "/admin-register",
+    adminLogin: "/login",
+    adminRegister: "/register",
+    resendOtp: "/resend-otp",
 
     //admin pages
     admin: "/admin",
