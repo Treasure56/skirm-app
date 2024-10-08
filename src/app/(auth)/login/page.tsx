@@ -1,24 +1,24 @@
 'use client'
 
-// import { login } from "@/actions";
+import { login } from "@/action";
 import { FormMessage, FormButton } from "@/components/form";
 import AppInput, { AppInputProps } from "@/components/form/AppInput";
 import { paths } from "@/utils";
 import Link from "next/link";
-// import { useFormState } from "react-dom";
+import { useFormState } from "react-dom";
 
 export default function Page() {
-  // const [res, action] = useFormState(login, {});
+  const [res, action] = useFormState(login, {});
   
   return (
     <div className=" py-8">
       <h2 className=" heading">Login</h2>
-      <form action={""}
+      <form action={action}
         className="flex flex-col gap-3 py-3 text-neutral-500"
       >
-        <FormMessage res={{}} />
+        <FormMessage res={res} />
         {loginFields.map((item) => {
-          return <AppInput key={item.name} {...item}  />;
+          return <AppInput key={item.name} {...item} error={res?.fieldErrors?.[item.name]} />;
         })}
         <div className="flex justify-end">
           <Link

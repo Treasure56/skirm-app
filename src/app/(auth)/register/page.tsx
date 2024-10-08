@@ -47,16 +47,16 @@ export default function Page() {
 
 const loginFields: AppInputProps[] = [
   {
+    name: "userName",
+    title: "User Name",
+    type: "text",
+    placeholder: "Enter your username",
+  },
+  {
     name: "email",
     title: "Email",
     type: "email",
     placeholder: "Email Address",
-  },
-  {
-    name: "username",
-    title: "User Name",
-    type: "text",
-    placeholder: "Enter your username",
   },
   {
     name: "password",
