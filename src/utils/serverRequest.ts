@@ -9,7 +9,7 @@ export const ServerRequest =  {
             ...init,
             headers: {
                 'Content-Type': 'application/json',
-                'x-access-token': accessToken,
+                'Authorization': `Bearer ${accessToken}`,
             }
         })
     },
@@ -21,7 +21,7 @@ export const ServerRequest =  {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-access-token': accessToken,
+                'Authorization': accessToken,
             },
             body: JSON.stringify(body)
         })
@@ -34,7 +34,7 @@ export const ServerRequest =  {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
-                'x-access-token': accessToken,
+                'Authorization': accessToken,
             },
             body: JSON.stringify(body)
         })
@@ -47,7 +47,7 @@ export const ServerRequest =  {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
-                'x-access-token': accessToken,
+                'Authorization': accessToken,
             },
             body: JSON.stringify(body)
         })

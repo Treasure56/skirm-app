@@ -5,7 +5,7 @@ export default function TableRow({awayTeam, endDateTime, homeTeam, startDateTime
     const now = new Date();
     return (
         <div className="grid grid-cols-8 text-sm py-2 items-center text-neutral-400">
-        <p>{homeTeam.name}</p>
+        <p>{homeTeam ? homeTeam.name : ""}</p>
         <div>
             {isCompleted ? (
                 <p>{homeScore} - {awayScore}</p>

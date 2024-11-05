@@ -1,3 +1,6 @@
 export {register} from "./auth/register"
 export {login} from "./auth/login"
 export {forgotPassword} from "./auth/forgot-password"
+export {fetchUsers} from "./fetch/fetchUsers"
+export {fetchMatches} from "./fetch/fetchMatches"
+export {fetchLeague} from "./fetch/fetchLeagues"

@@ -1,8 +1,13 @@
-import { dummyUsers } from "@/skirm-app-shared/user";
+import { Pagination } from "@/components/Pagination";
 import TableRow from "./TableRow";
+import { fetchUsers } from "@/action";
 
-export default function Table() {
+export default async function Table({query}:{query:string}) {
+  const users = await fetchUsers(query);
+  if(!users || users == "error") return<div className="info">Error fetching users</div>
+  // console.log(users);
   return (
+   <>
     <div className="bg-light p-4 flex flex-col shadow  rounded-xl overflow-x-auto">
       <div className="flex flex-col divide-y-2 min-w-[700px]">
         <div className="grid grid-cols-7 text-sm font-semibold bg-gray-200 p-2 rounded">
@@ -15,11 +20,13 @@ export default function Table() {
           <p>Action</p>
         </div>
         {
-            dummyUsers.map(dummyUser => (
-                <TableRow key={dummyUser._id} {...dummyUser}/>
+            users.existingRecords.map((v, i) => (
+                <TableRow key={i} {...v}/>
             ))
         }
       </div>
     </div>
+      <Pagination pagination={users} />
+   </>
   );
 }

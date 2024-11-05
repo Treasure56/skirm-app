@@ -1,8 +1,9 @@
-import { dummyLeagues } from "@/skirm-app-shared/league";
+import { fetchLeague } from "@/action";
 import TableRow from "./TableRow";
 
-export default function Table() {
-    const league = dummyLeagues;
+export default async function Table({query}:{query:string}) {
+    const league =  await fetchLeague(query);
+    if(!league || league == "error") return<div className="info">Error fetching leagues</div>
     return (
         <div className="bg-light p-4 flex flex-col shadow  rounded-xl overflow-x-auto">
         <div className="flex flex-col divide-y-2 min-w-[700px]">
@@ -13,8 +14,8 @@ export default function Table() {
             <p>Date</p>
           </div>
           {
-              league.map(league => (
-                  <TableRow key={league._id} {...league}/>
+              league.existingRecords.map((v, i) => (
+                  <TableRow key={i} {...v}/>
               ))
           }
          

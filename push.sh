@@ -2,7 +2,7 @@ git add .
 
 echo "Added: "
 echo ------------------------------------------------------------------------------------
-git commit -m "started api integration"
+git commit -m "implemented all the fetch Apis"
 
 echo "Committed: "
 echo ------------------------------------------------------------------------------------

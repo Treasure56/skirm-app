@@ -2,8 +2,11 @@ import UsersTableRow from "./UserTableRow";
 import Link from "next/link";
 import { HiChevronRight } from "react-icons/hi2";
 import { dummyUsers } from "@/skirm-app-shared/user";
+import { fetchUsers } from "@/action";
 
-export default function UsersTable() {
+export default async function UsersTable() {
+    const users = await fetchUsers();
+    if(!users || users == "error") return<div className="info">Error fetching users</div>
     
     return (
         <div className="bg-light p-4 flex flex-col shadow  rounded-xl">
@@ -17,8 +20,8 @@ export default function UsersTable() {
                 <p>Phone</p>
                </div>
               {
-                dummyUsers.map(dummyUser => (
-                    <UsersTableRow  key={dummyUser._id} {...dummyUser}/>
+                users.existingRecords.map((v, i) => (
+                    <UsersTableRow  key={i} {...v}/>
                 ))
               }
             </div>

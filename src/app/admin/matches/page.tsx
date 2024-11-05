@@ -5,8 +5,10 @@ import LeagueFilter from "@/components/admin/LeagueFilter";
 import CreateMatch from "./CreateMatch";
 import { HiPlus } from "react-icons/hi2";
 import { Suspense } from "react";
+import { AppPageProps } from "@/types/basicTypes";
+import { buildUrlQuery } from "@/functions/helpers";
 
-export default function Page() {
+export default function Page({searchParams}:AppPageProps) {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex justify-between  gap-2">
@@ -23,7 +25,7 @@ export default function Page() {
           <LeagueFilter />
         </Suspense>
       </div>
-      <Table />
+      <Table  query={(buildUrlQuery(searchParams))}/>
     </div>
   );
 }

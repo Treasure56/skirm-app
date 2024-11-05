@@ -12,7 +12,7 @@ export default function Page() {
             Overview
         </PageTitle>
       <OverviewCardContainer />
-      <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
+      <div className="grid grid-cols-2  items-start gap-6 max-md:grid-cols-1">
       <UsersTable />
       <div className="grid grid-cols-1 gap-6">
         <SkirmTable />

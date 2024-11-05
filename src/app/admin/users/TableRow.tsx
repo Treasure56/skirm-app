@@ -1,3 +1,4 @@
+import { FormButton } from "@/components/form";
 import { User } from "@/skirm-app-shared/user";
 import { Avatar } from "@radix-ui/themes";
 import { formatDistance } from "date-fns";
@@ -36,7 +37,7 @@ export default function TableRow({
       <p className={isVerified ? "btn-status-success" : "btn-status-pending"}>{isVerified ? "Verified" : "Unverified"}</p>
       <p>{formatDistance(createdAt, now, { addSuffix: true, })}</p>
       <div className="flex justify-start">
-      <button className={isDisabled ? "bg-green-200 rounded-[35px] px-4 py-1 text-dark" : "bg-red-200 rounded-[35px] px-4 py-1 text-dark"}>{isDisabled ? "Enable" : "Disable"}</button>
+      <FormButton className={isDisabled ? "bg-green-200 rounded-[35px] px-4 py-1 text-dark" : "bg-red-200 rounded-[35px] px-4 py-1 text-dark"}>{isDisabled ? "Enable" : "Disable"}</FormButton>
       </div>
     </div>
   );
