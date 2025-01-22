@@ -7,6 +7,7 @@ export const paths = {
     adminLogin: "/login",
     adminRegister: "/register",
     resendOtp: "/resend-otp",
+    forgotPassword: "/forgot-password",
 
     //admin pages
     admin: "/admin",
