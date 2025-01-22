@@ -1,6 +1,6 @@
 
 
-const HOST = "https://skirmapp.onrender.com/api";
+const HOST = "http://46.202.195.86:8001/api";
 export const apis = {
   auth: {
     login: `${HOST}/admin/auth/login`,

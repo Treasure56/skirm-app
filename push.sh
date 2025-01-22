@@ -2,7 +2,7 @@ git add .
 
 echo "Added: "
 echo ------------------------------------------------------------------------------------
-git commit -m "implemented all the fetch Apis"
+git commit -m "implemented authentication Apis"
 
 echo "Committed: "
 echo ------------------------------------------------------------------------------------

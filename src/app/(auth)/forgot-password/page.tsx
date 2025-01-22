@@ -35,7 +35,8 @@ export default function Page() {
           error={res?.fieldErrors?.email}
         />
         {level == 1 && (
-          <AppInput name="resetCode" title="OTP" placeholder=" Enter your code" error={res?.fieldErrors?.resetCode} />
+          <AppInput name="resetCode" title="OTP" placeholder=" Enter your code"
+           error={res?.fieldErrors?.resetCode} />
         )}
         {level == 1 &&
           loginFields.map((item) => <AppInput key={item.name} {...item} error={res?.fieldErrors?.[item.name]} />)}

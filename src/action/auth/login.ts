@@ -11,7 +11,7 @@ import { z } from "zod";
 
 const schema = z.object ({
     email: validators.email,
-    password: z.string().min(6, "invalid login details")
+    // password: z.string().min(6, "invalid login details")
 })
 type FormType = z.infer<typeof schema>
 
@@ -39,7 +39,7 @@ export async function login(_:ActionResponse, formData:FormData):Promise<ActionR
         }
         
     } catch (error) {
-        console.error(error)
+        console.error({error})
         return {error:"Something went wrong"}
         
     }
