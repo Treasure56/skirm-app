@@ -1,20 +1,20 @@
 'use client'
 
-import SidebarLink, { SidebarLinkProps } from "./SidebarLink";
-import { paths } from "@/utils";
 import { AppLogo } from "@/components/navbar";
-import { FaX } from "react-icons/fa6";
+import { Admin } from "@/skirm-app-shared/";
+import { useAdminStore } from "@/state";
+import { paths } from "@/utils";
+import { Avatar } from "@radix-ui/themes";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect } from "react";
-import { useAdminStore } from "@/state";
-import { Admin } from "@/skirm-app-shared/";
-import { IoGrid } from "react-icons/io5";
 import { BiLogOut, BiMoneyWithdraw } from "react-icons/bi";
-import { Avatar } from "@radix-ui/themes";
+import { FaX } from "react-icons/fa6";
 import { HiCheckCircle, HiUsers } from "react-icons/hi2";
 import { IoMdFootball } from "react-icons/io";
-import { SiClubforce, SiNotion, SiPremierleague } from "react-icons/si";
+import { IoGrid } from "react-icons/io5";
 import { RiMoneyDollarCircleFill, RiSettings3Fill } from "react-icons/ri";
+import { SiClubforce, SiPremierleague } from "react-icons/si";
+import SidebarLink, { SidebarLinkProps } from "./SidebarLink";
 
 export default function Sidebar({ admin }: { admin: Admin }) {
     const pathname = usePathname();

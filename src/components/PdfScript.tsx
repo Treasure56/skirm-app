@@ -1,4 +1,3 @@
-import Script from "next/script";
 
 export default function PdfScript({title = "reciept"}:{title?: string}) {
   return (

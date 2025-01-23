@@ -3,10 +3,9 @@
 import { paths } from "@/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
-import { BsArrowRight } from "react-icons/bs";
-import { MobileNav } from "./MobileNav";
+import { useEffect, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
+import { MobileNav } from "./MobileNav";
 
 export default function Navbar() {
   const pathname = usePathname();

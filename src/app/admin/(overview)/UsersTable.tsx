@@ -1,8 +1,7 @@
-import UsersTableRow from "./UserTableRow";
+import { fetchUsers } from "@/action";
 import Link from "next/link";
 import { HiChevronRight } from "react-icons/hi2";
-import { dummyUsers } from "@/skirm-app-shared/user";
-import { fetchUsers } from "@/action";
+import UsersTableRow from "./UserTableRow";
 
 export default async function UsersTable() {
     const users = await fetchUsers();

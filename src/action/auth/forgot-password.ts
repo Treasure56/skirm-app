@@ -2,9 +2,8 @@
 
 import { formDataToObject } from "@/functions/helpers";
 import { ActionResponse, ApiResponse } from "@/skirm-app-shared/basicTypes";
-import { apis, paths, validators } from "@/utils";
+import { apis, validators } from "@/utils";
 import { ClientRequest } from "@/utils/clientFetch";
-import { redirect, RedirectType } from "next/navigation";
 import { z } from "zod";
 
 const schema = z.object ({
@@ -30,14 +29,14 @@ export async function forgotPassword(_:ActionResponse, formData:FormData):Promis
    
 
     if(!data.email) return {error:"Something went wrong"}
-    let success = false
+    // let success = false
    try {
     if(data.resetCode != undefined){
         const validate = passwordSchema.safeParse(data)
         console.log(1, data)
         if(!validate.success) return {fieldErrors:validate.error.flatten().fieldErrors}
         if(data.newPassword !== data.confirmPassword) return {error:"Passwords do not match"}
-        const req = await ClientRequest.post(apis.auth.forgotPassword,data)
+        const req = await ClientRequest.post(apis.auth.resetPassword,data)
         const res:ApiResponse = await req.json()
         if(res.status == 200){
             return {success:"password changed, redirecting to login", data: 2}
@@ -50,8 +49,8 @@ export async function forgotPassword(_:ActionResponse, formData:FormData):Promis
         const req = await ClientRequest.post(apis.auth.forgotPassword,data)
         const res:ApiResponse = await req.json()
         if(res.status == 200){
-            // return { success:res.data, data: 1}
-            success = true
+            return { success:res.data, data: 1}
+            // success = true
         }else{
             return {error:res.data}
         } 
@@ -63,7 +62,7 @@ export async function forgotPassword(_:ActionResponse, formData:FormData):Promis
     return {error:"Something went wrong"}
     
    }
-   if(success) redirect(paths.adminLogin, RedirectType.replace) 
-       return {}
+//    if(success) redirect(paths.adminLogin, RedirectType.replace) 
+//        return {}
 }
 

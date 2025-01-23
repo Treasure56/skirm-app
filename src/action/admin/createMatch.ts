@@ -3,7 +3,6 @@ import { ActionResponse, ApiResponse } from "@/types/basicTypes";
 import { apis, validators } from "@/utils";
 import { ServerRequest } from "@/utils/serverRequest";
 import { z } from "zod";
-import { uploadFile } from "./uploadFile";
 
 const schema = z.object({
     homeTeam: validators.min3,
